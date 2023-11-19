@@ -1,0 +1,14 @@
+﻿@* <div class="container">
+    <div style="height: 80px"></div>
+    <h1>ALL PRODUCTS</h1>
+    <div class="product-grid">
+        <div class="row row-cols-4">
+            @foreach (var product in products)
+            {
+                <div class="col">
+                    <partial name="_CollectionItem.cshtml" model="product" />
+                </div>
+            }
+        </div>
+    </div>
+</div> *@

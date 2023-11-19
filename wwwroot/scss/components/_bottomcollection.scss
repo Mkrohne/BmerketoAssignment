@@ -1,0 +1,114 @@
+﻿@import '../core/_colors.scss';
+@import '../core/_fonts.scss';
+@import '../core/_mixins.scss';
+
+
+.inforow {
+    background-color: white;
+
+    .container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @include lg {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+
+        .content {
+            .collection-item {
+                background-color: $color-white;
+                text-decoration: none;
+                display: block;
+                width: 369px;
+
+                img {
+                    width: 369px;
+                    height: 295px;
+                }
+
+                .body {
+                    color: $color-dark-2;
+                    font-family: $font-poppins;
+                    padding: 10px 0;
+
+                    .title {
+                        grid-area: title;
+                        font-size: 18px;
+                        font-family: $font-poppins;
+                        font-weight: $font-weight-medium;
+                    }
+
+                    .info {
+                        display: none;
+                        font-family: $font-poppins;
+                        padding: 2px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 1px;
+
+                        .price {
+                            display: none;
+                            grid-area: price;
+                            font-size: 16px;
+                            align-items: center;
+                        }
+
+                        .add-cart {
+                            display: none;
+                            grid-area: cart;
+                            text-align: right;
+                            align-items: center;
+                            padding: 2px;
+                            font-size: 24px;
+                            color: $color-dark-2;
+
+                            &:hover {
+                                display: none;
+                                color: $color-dark-4;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .information {
+                margin: 0 0 0 0 !important;
+
+                .description {
+                    font-size: 10px;
+                    font-family: $font-poppins;
+                    font-weight: $font-weight-regular;
+                    color: #636363;
+
+                    @include xl {
+                        font-size: 16px;
+                    }
+
+                    .text {
+                        font-family: $font-roboto;
+                        font-weight: $font-weight-regular;
+                        margin: 0;
+                        color: #636363;
+                    }
+                }
+
+                .posted {
+                    font-size: 12px;
+                    font-weight: $font-weight-regular;
+                    font-family: $font-poppins;
+                    color: #B0B0B0;
+                    margin-top: 10px;
+                }
+            }
+            
+        }
+    }
+}
+
+

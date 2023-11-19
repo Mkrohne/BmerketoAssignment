@@ -1,0 +1,15 @@
+﻿@* <section class="top-selling">
+    <h1 class="collection-title">Top selling products in this week</h1>
+    <div class="container-fluid">
+        <div class="collection-grid">
+            @foreach (var product in _bestProducts)
+            {
+                <partial name="_CollectionItem.cshtml" model="product" />
+            }
+        </div>
+    </div>
+    <div class="load-more">
+        <button class="btn-outline-white me-1"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="btn-outline-white ms-1"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</section> *@

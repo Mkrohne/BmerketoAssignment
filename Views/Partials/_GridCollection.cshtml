@@ -1,0 +1,38 @@
+﻿@using WebApp.Helpers.Repositories;
+@using WebApp.Models.Entities;
+@inject ProductCategoryEntity _productCategoryEntity;
+@inject ProductRepo productRepo;
+@{
+    var products = await productRepo.GetAsync();
+    var _bestProducts = products.Where(x => x.ProductCategories.Any(x => x.CategoryId == 3));
+}
+
+<section class="grid-collection">
+    <div class="container">
+        <h1 class="collection-title">Best Collection</h1>
+        <ul class="categories">
+            <li class="category-item">All</li>
+            <li class="category-item">Bag</li>
+            <li class="category-item">Dress</li>
+            <li class="category-item">Decoration</li>
+            <li class="category-item">Essentials</li>
+            <li class="category-item">Interior</li>
+            <li class="category-item">Laptop</li>
+            <li class="category-item">Mobile</li>
+            <li class="category-item">Beauty</li>
+            </ul>
+
+        <div class="collection-grid">
+            @foreach (var product in _bestProducts)
+            {
+                <div>
+                    <partial name="_CollectionItem.cshtml" model="product" />
+                </div>
+            }
+        </div>             
+            
+        <div class="load-more">
+            <button class="btn-outline-white">LOAD MORE<i class="fa-solid fa-rotate-right"></i></button>
+        </div>
+    </div>
+</section>

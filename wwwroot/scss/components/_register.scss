@@ -1,0 +1,107 @@
+﻿@import '../core/_colors.scss';
+@import '../core/_fonts.scss';
+@import '../core/_mixins.scss';
+
+.registersection {
+    height: 1500px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .registerbody {
+            margin-top: 50px;
+            padding-top: 10px;
+            height: 1120px;
+            width: 1140px;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            opacity: 0.8;
+
+            .registerform {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, auto);
+                grid-row-gap: 20px;
+
+                .title {
+                    font-size: 16px;
+                    font-family: $font-roboto;
+                    margin-left: 40px;
+                    margin-top: 30px;
+                    color: #636363;
+                }
+
+                .line {
+                    width: 245px;
+                    margin-left: 40px;
+                }
+
+                .form-row {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                }
+
+                .form-one-row {
+                    width: 93%;
+                    margin-left: 40px;
+                }
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 20px;
+                    color: #636363;
+                    font-family: $font-roboto;
+                    font-size: 16px;
+                }
+
+                label {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    width: 500px;
+
+                    span {
+                        color: red;
+                        font-size: 14px;
+                        margin-left: 100px;
+                    }
+                }
+
+
+                input {
+                    height: 50px;
+                    background-color: #FAFAFA;
+                    border: none;
+                }
+
+                .infobox {
+                    margin-left: 30px;
+                    font-size: 14px;
+                    font-family: $font-roboto;
+                    display: block;
+                }
+
+                button[type="submit"] {
+                    background-color: $color-theme-1;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    width: 140px;
+                    height: 50px;
+                    margin-left: 40px;
+                }
+
+                button[type="submit"]:hover {
+                    background-color: rgb(233, 96, 96);
+                }
+            }
+        }
+    }
+}
